@@ -26,20 +26,19 @@ export const Header: React.FC<HeaderProps> = ({
           
           {/* Título e Identidade */}
           <div className="flex items-center space-x-3">
-            <div className="bg-blue-600/20 p-2.5 rounded-xl border border-blue-500/30 text-blue-400 flex items-center justify-center shadow-inner">
-              <ShieldCheck className="w-8 h-8 text-blue-400" />
-            </div>
+            {/* Logo Mark Geométrico Polygon Diamond */}
+            <div className="w-8 h-8 bg-sky-400 shrink-0 shadow-lg shadow-sky-400/20" style={{ clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)' }} />
             <div>
               <div className="flex items-center gap-2">
-                <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-100">
+                <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-100 uppercase font-sans">
                   Registro Imutável de Eventos
                 </h1>
-                <span className="bg-blue-500/10 text-blue-400 text-xs font-semibold px-2.5 py-0.5 rounded-full border border-blue-500/20">
-                  IPFS Audit
+                <span className="bg-sky-500/10 text-sky-400 text-xs font-mono font-semibold px-2.5 py-0.5 rounded border border-sky-500/20">
+                  IPFS-PINATA-GATEWAY
                 </span>
               </div>
               <p className="text-xs sm:text-sm text-slate-400 mt-0.5">
-                Provas Criptográficas Descentralizadas • Regra "Não confiar, verificar"
+                Protocolo de Auditoria Descentralizada • Regra "Não confiar, verificar"
               </p>
             </div>
           </div>

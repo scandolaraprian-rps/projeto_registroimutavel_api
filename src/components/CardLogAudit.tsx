@@ -24,6 +24,14 @@ export const CardLogAudit: React.FC<CardLogAuditProps> = ({ log, onInspect }) =>
     }
   };
 
+  // Cores da borda esquerda baseadas no nível de criticidade (Geometric Balance)
+  const leftBorderColor = {
+    BAIXO: 'border-l-sky-400',
+    MEDIO: 'border-l-amber-400',
+    ALTO: 'border-l-orange-400',
+    CRITICO: 'border-l-rose-500',
+  }[log.dadosEvento.nivel];
+
   // Cores de badges por nível de criticidade
   const badgeColors = {
     BAIXO: 'bg-emerald-950/60 text-emerald-400 border-emerald-500/30',
@@ -33,7 +41,7 @@ export const CardLogAudit: React.FC<CardLogAuditProps> = ({ log, onInspect }) =>
   };
 
   return (
-    <div className="bg-slate-900/90 border border-slate-800 hover:border-slate-700 rounded-2xl p-5 text-slate-100 shadow-md transition-all">
+    <div className={`bg-slate-900 border border-slate-800 ${leftBorderColor} border-l-4 hover:border-slate-700 rounded-r-xl rounded-l-none p-5 text-slate-100 shadow-md transition-all`}>
       
       {/* Topo do Card */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-3">
