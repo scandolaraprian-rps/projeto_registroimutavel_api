@@ -1,0 +1,6 @@
+{
+  "name": "Registro Imutável de Eventos",
+  "description": "Painel de Auditoria e Compliance Web3 para registro imutável de eventos críticos em IPFS via Pinata API.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
