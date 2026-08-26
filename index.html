@@ -3,22 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registro Imutável de Eventos</title>
+    <title>Registro Imutável | Auditoria Corporativa</title>
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <h2>Registro Imutável de Eventos</h2>
-    <p>O lema é: "Não confiar - verificar"</p>
+    <header class="header">
+      <h1>Registro Imutável</h1>
+      <p>Não Confiar — Verificar</p>
+    </header>
     
-    <!-- Formulário para interagir com o DOM -->
-    <form id="form-log">
-      <input type="text" id="input-log" placeholder="Descreva o evento corporativo..." required style="width: 300px;">
-      <button type="submit">Registrar e Gerar Hash</button>
-    </form>
+    <main class="container">
+      <form id="form-log">
+        <div class="form-group">
+          <label for="input-log">Descrição do Evento Corporativo</label>
+          <input type="text" id="input-log" placeholder="Ex: Acesso autorizado ao servidor financeiro principal" required autocomplete="off">
+        </div>
+        <button type="submit">Registrar Prova Criptográfica</button>
+      </form>
 
-    <!-- Aqui o JS vai injetar as mensagens e o resultado sem dar refresh -->
-    <div id="resultado-painel" style="margin-top: 20px; font-family: monospace;"></div>
+      <div id="resultado-painel"></div>
+    </main>
 
-    <!-- Chamando nosso arquivo JavaScript puro com caminho relativo -->
     <script type="module" src="./app.js"></script>
   </body>
 </html>
