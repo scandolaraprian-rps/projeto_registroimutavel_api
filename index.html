@@ -1,13 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registro Imutável de Eventos</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="./src/main.tsx"></script>
+    <h2>Registro Imutável de Eventos</h2>
+    <p>O lema é: "Não confiar - verificar"</p>
+    
+    <!-- Formulário para interagir com o DOM -->
+    <form id="form-log">
+      <input type="text" id="input-log" placeholder="Descreva o evento corporativo..." required style="width: 300px;">
+      <button type="submit">Registrar e Gerar Hash</button>
+    </form>
+
+    <!-- Aqui o JS vai injetar as mensagens e o resultado sem dar refresh -->
+    <div id="resultado-painel" style="margin-top: 20px; font-family: monospace;"></div>
+
+    <!-- Chamando nosso arquivo JavaScript puro com caminho relativo -->
+    <script type="module" src="./app.js"></script>
   </body>
 </html>
-
