@@ -18,6 +18,19 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Estilo do fundo de nevasca */
+#snowfall {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .header {
@@ -27,7 +40,11 @@ body {
   padding: 40px 20px;
   text-align: center;
   box-sizing: border-box;
+  position: relative;
+  z-index: 1;
 }
+
+
 
 .header h1 {
   font-family: 'Merriweather', serif;
@@ -55,6 +72,8 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   border-top: 4px solid var(--primary-navy);
   box-sizing: border-box;
+  position: relative;
+  z-index: 1;
 }
 
 .form-group {
